@@ -9,6 +9,15 @@
 </style>
 
 <div class="example-wrapper">
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        <form action="{{ path('app_logout') }}" method="post">
+            <button type="submit">Logout</button>
+        </form>
+    {% else %}
+        <a href="{{ path('app_login') }}">Login</a>
+        <a href="{{ path('app_register') }}">Register</a>
+    {% endif %}
+
     <h1>Hello {{ controller_name }}! ✅</h1>
     <h2>Your lucky number is: {{ lucky }}!</h2>
     

@@ -60,7 +60,9 @@ Encore
     //.enableTypeScriptLoader()
 
     // uncomment if you use React
+    .addEntry('login', './assets/js/components/LoginForm.js')
     .enableReactPreset()
+    
 
     // uncomment to get integrity="..." attributes on your script & link tags
     // requires WebpackEncoreBundle 1.4 or higher
