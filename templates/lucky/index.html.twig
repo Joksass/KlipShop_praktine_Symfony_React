@@ -39,6 +39,8 @@
             <th scope="col">User #</th>
             <th scope="col">Email</th>
             <th scope="col">Roles</th>
+            <th scope="col">Username</th>
+            <th scope="col">Description</th>
             <th scope="col">Actions</th>
         </tr>
         </thead>
@@ -46,17 +48,51 @@
         <tr>
             <th scope="row">1</th>
             <td>Arnas</td>
-            <td>Joksas</td>
+            <td>USER</td>
+            <td>Joksass</td>
+            <td>Empty</td>
             <td>
             <button type="button" class="btn btn-success btn-sm">Approve</button>
             <button type="button" class="btn btn-danger btn-sm">Unapprove</button>
-            <button type="button" class="btn btn-primary btn-sm">Edit</button>
+            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">Edit</button>
             <button type="button" class="btn btn-dark btn-sm">Delete</button>
             </td>
         </tr>
-
         </tbody>
     </table>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <form>
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Arnas</h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="list-unstyled">
+                            <li>Roles:</li>
+                                <ul>USER</ul>
+                        </ul>
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" id="username" name="username">
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <textarea class="form-control" id="description" rows="3" name="description" type="text">Empty</textarea>
+                        </div>                      
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        <form>
+    </div>
+    <!-- Modal -->
 
 </div>
 {% endblock %}
