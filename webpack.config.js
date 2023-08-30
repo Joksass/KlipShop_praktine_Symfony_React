@@ -61,6 +61,7 @@ Encore
 
     // uncomment if you use React
     .addEntry('login', './assets/js/components/LoginForm.js')
+    .addEntry('register', './assets/js/components/RegisterForm.js')
     .enableReactPreset()
     
 

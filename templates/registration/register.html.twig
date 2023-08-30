@@ -5,17 +5,6 @@
 {% block body %}
     <h1>Register</h1>
 
-    {{ form_errors(registrationForm) }}
+    <div id="register-form"></div>
 
-    {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
-        }) }}
-        {{ form_row(registrationForm.agreeTerms) }}
-
-        <button type="submit" class="btn">Register</button>
-    {{ form_end(registrationForm) }}
-
-    <a href="{{ path('app_login') }}">Jau turite paskyrą?</a>
 {% endblock %}

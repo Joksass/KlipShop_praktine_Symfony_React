@@ -9,8 +9,10 @@
 import './styles/app.css';
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import LoginForm from './js/components/LoginForm.js';
+import RegisterForm from './js/components/RegisterForm.js';
 
 // const helloContainer = document.getElementById('hello-form');
 // const root = createRoot(helloContainer);
@@ -20,4 +22,10 @@ const loginContainer = document.getElementById('login-form');
 if(loginContainer){
     const loginRoot = createRoot(loginContainer);
     loginRoot.render(<LoginForm />)
+}
+
+const registerContainer = document.getElementById('register-form');
+if(registerContainer){
+    const registerRoot = createRoot(registerContainer);
+    registerRoot.render(<RegisterForm />)
 }
