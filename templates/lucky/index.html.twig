@@ -33,14 +33,30 @@
         <h4>{{ testas.id }} {{ testas.name }} {{ testas.surname }} </h4>
     {% endfor %}
 
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">User #</th>
+            <th scope="col">Email</th>
+            <th scope="col">Roles</th>
+            <th scope="col">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Arnas</td>
+            <td>Joksas</td>
+            <td>
+            <button type="button" class="btn btn-success btn-sm">Approve</button>
+            <button type="button" class="btn btn-danger btn-sm">Unapprove</button>
+            <button type="button" class="btn btn-primary btn-sm">Edit</button>
+            <button type="button" class="btn btn-dark btn-sm">Delete</button>
+            </td>
+        </tr>
 
+        </tbody>
+    </table>
 
-    
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/xampp/htdocs/KlipShop_praktine_Symfony_React/src/Controller/LuckyController.php'|file_link(0) }}">src/Controller/LuckyController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/xampp/htdocs/KlipShop_praktine_Symfony_React/templates/lucky/index.html.twig'|file_link(0) }}">templates/lucky/index.html.twig</a></code></li>
-    </ul>
 </div>
 {% endblock %}
