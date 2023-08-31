@@ -52,47 +52,129 @@
             <td>Joksass</td>
             <td>Empty</td>
             <td>
-            <button type="button" class="btn btn-success btn-sm">Approve</button>
-            <button type="button" class="btn btn-danger btn-sm">Unapprove</button>
-            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">Edit</button>
-            <button type="button" class="btn btn-dark btn-sm">Delete</button>
+                <!-- APPROVE -->
+                <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#apprModalID">Approve</button>
+                    <!-- Unapprove Modal -->
+                    <div class="modal fade" id="apprModalID" tabindex="-1" role="dialog" aria-labelledby="apprModalTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <form >
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="apprModalTitle">ID Arnas</h5>
+                                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="text-center h5">Approve it?</div>                     
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Approve</button>
+                                </div>
+                            </form >
+                        </div>
+                        </div>
+                    </div>
+                    <!-- Unapprove Modal End -->
+                <!-- APPROVE END -->
+
+                <!-- UNAPPROVE -->
+                <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#unappModalID">Unapprove</button>
+                    <!-- Unapprove Modal -->
+                    <div class="modal fade" id="unappModalID" tabindex="-1" role="dialog" aria-labelledby="unappModalTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <form >
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="unappModalTitle">ID Arnas</h5>
+                                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="text-center h5">Unapprove it?</div>                     
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Unapprove</button>
+                                </div>
+                            </form >
+                        </div>
+                        </div>
+                    </div>
+                    <!-- Unapprove Modal End -->
+                <!-- UNAPPROVE END -->
+
+                <!-- EDIT -->
+                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editModalID">Edit</button>
+                    <!-- Edit Modal -->
+                    <div class="modal fade" id="editModalID" tabindex="-1" role="dialog" aria-labelledby="editModalTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <form >
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="editModalTitle">Arnas</h5>
+                                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <ul class="list-unstyled">
+                                        <li>Roles:</li>
+                                            <ul>USER</ul>
+                                    </ul>
+
+                                    <label for="username">Username</label>
+                                    <input type="text" class="form-control" id="username" name="username">
+                                    
+                                    <div class="form-group">
+                                        <label for="description">Description</label>
+                                        <textarea class="form-control" id="description" rows="3" name="description" type="text">Empty</textarea>
+                                    </div>                      
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </form >
+                        </div>
+                        </div>
+                    </div>
+                    <!-- Edit Modal End -->
+                <!-- EDIT END -->
+
+                <!-- DELETE -->
+                <button type="button" class="btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#delModalID">Delete</button>
+                    <!-- Delete Modal -->
+                    <div class="modal fade" id="delModalID" tabindex="-1" role="dialog" aria-labelledby="delModalTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <form >
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="delModalTitle">ID Arnas</h5>
+                                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="text-center h5">Delete it?</div>                     
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Delete</button>
+                                </div>
+                            </form >
+                        </div>
+                        </div>
+                    </div>
+                    <!-- Delete Modal End -->
+                <!-- DELETE END -->
             </td>
         </tr>
         </tbody>
     </table>
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <form>
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Arnas</h5>
-                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <ul class="list-unstyled">
-                            <li>Roles:</li>
-                                <ul>USER</ul>
-                        </ul>
-                        <label for="username">Username</label>
-                        <input type="text" class="form-control" id="username" name="username">
-                        <div class="form-group">
-                            <label for="description">Description</label>
-                            <textarea class="form-control" id="description" rows="3" name="description" type="text">Empty</textarea>
-                        </div>                      
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                </div>
-            </div>
-        <form>
-    </div>
-    <!-- Modal -->
 
 </div>
 {% endblock %}

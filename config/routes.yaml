@@ -6,6 +6,27 @@ controllers:
 home:
     path: /
     controller: App\Controller\LuckyController::index
+
 app_logout:
     path: /logout
     methods: POST
+
+app_login:
+    path: /login
+    controller: App\Controller\LoginController::index
+api_login:
+    path: /api/login
+    controller: App\Controller\ApiLoginController::index
+    methods: POST
+
+app_register:
+    path: /register
+    controller: App\Controller\RegistrationController::register
+api_register:
+    path: /api/register
+    controller: App\Controller\ApiRegisterController::index
+    methods: POST
+
+
+
+

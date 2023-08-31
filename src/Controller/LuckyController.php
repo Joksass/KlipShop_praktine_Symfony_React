@@ -10,7 +10,7 @@ use Doctrine\ORM\EntityManagerInterface;
 
 class LuckyController extends AbstractController
 {
-    #[Route('/lucky', name: 'app_lucky')]
+    //#[Route('/lucky', name: 'app_lucky')]
     public function index(EntityManagerInterface $entityManager): Response
     {
         $testRepository = $entityManager->getRepository(Test::Class);

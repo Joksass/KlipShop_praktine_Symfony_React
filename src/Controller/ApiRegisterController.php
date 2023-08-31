@@ -16,7 +16,7 @@ use App\Form\RegistrationFormType;
 
 class ApiRegisterController extends AbstractController
 {
-    #[Route('/api/register', name: 'app_api_register', methods: ['POST'])]
+    //#[Route('/api/register', name: 'api_register', methods: ['POST'])]
     public function index(Request $request, UserPasswordHasherInterface $userPasswordHasher, EntityManagerInterface $entityManager): JsonResponse
     {
         // Parse JSON data from the request
