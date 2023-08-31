@@ -49,33 +49,48 @@ const RegisterForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="error-message">{errorMessage}</div>
-      <label htmlFor="email">Email:</label>
-      <input
-        type="email"
-        id="email"
-        name="_email"
-        onChange={handleEmailChange}
-        required
-      />
+    <div class="container w-50 mt-3">
+        <div class="card">
+            <div class="card-body d-flex justify-content-center">
+                <form onSubmit={handleSubmit}>
+                    <div class="row ">
+                        <div class="col-12 h2 text-center">REGISTER</div>
+                        <div class="col-12 text-center">{errorMessage}</div>
+                        <div class="col-12">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="email" name="_email" placeholder="name@example.com" onChange={handleEmailChange} required/>
+                                <label for="email">Email address</label>
+                            </div>
+                        </div>
+                    </div>
 
-      <label htmlFor="plainPassword">Password:</label>
-      <input
-        type="password"
-        id="plainPassword"
-        name="_plainPassword"
-        minlength="6"
-        onChange={handlePlainPasswordChange}
-        required
-      />
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control" id="password" name="_password" placeholder="password" minlength="6" onChange={handlePlainPasswordChange} required/>
+                                <label for="password">Password</label>
+                            </div>
+                        </div>
+                    </div>
 
-      <label htmlFor="registration-form-agreeTerms" class="required">Agree Terms</label>
-      <input type='checkbox' id='registration-form-agreeTerms' name="agreeTerms" required/>
-      
-      <button type="submit">Register</button>
-      <a href="/login">Jau turite paskyrą?</a>
-    </form>
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-center">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="registration-form-agreeTerms" name="agreeTerms" required/>
+                                <label class="form-check-label" for="registration-form-agreeTerms">Checked checkbox</label>
+                            </div>
+                        </div>
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-dark">Register</button>
+                        </div>
+                        <div class="col-12 text-center">
+                            <a href="/login">Login?</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
   );
 };
 
