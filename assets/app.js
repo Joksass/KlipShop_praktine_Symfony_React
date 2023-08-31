@@ -13,6 +13,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import LoginForm from './js/components/LoginForm.js';
 import RegisterForm from './js/components/RegisterForm.js';
+import HomeShow from './js/components/HomeShow.js';
 
 // const helloContainer = document.getElementById('hello-form');
 // const root = createRoot(helloContainer);
@@ -28,4 +29,10 @@ const registerContainer = document.getElementById('register-form');
 if(registerContainer){
     const registerRoot = createRoot(registerContainer);
     registerRoot.render(<RegisterForm />)
+}
+
+const homeShowContainer = document.getElementById('home-show');
+if(homeShowContainer){
+    const homeShowRoot = createRoot(homeShowContainer);
+    homeShowRoot.render(<HomeShow />)
 }

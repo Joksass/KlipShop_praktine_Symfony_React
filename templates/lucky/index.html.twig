@@ -32,14 +32,13 @@
     {% for testas in test %}
         <h4>{{ testas.id }} {{ testas.name }} {{ testas.surname }} </h4>
     {% endfor %}
-
-    <table class="table table-hover">
+    <div class="table-responsive">
+    <table class="table table-hover ">
         <thead>
         <tr>
-            <th scope="col">User #</th>
+            <th scope="col">#</th>
             <th scope="col">Email</th>
             <th scope="col">Roles</th>
-            <th scope="col">Username</th>
             <th scope="col">Description</th>
             <th scope="col">Actions</th>
         </tr>
@@ -47,14 +46,18 @@
         <tbody>
         <tr>
             <th scope="row">1</th>
-            <td>Arnas</td>
-            <td>USER</td>
-            <td>Joksass</td>
-            <td>Empty</td>
+            <td>admin</td>
+            <td>ROLE_ADMINROLE_UNAPPROVED</td>
+            <td></td>
             <td>
+                <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#apprModalID">Approve</button>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#unappModalID">Unapprove</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModalID">Edit</button>
+                    <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#delModalID">Delete</button>
+                </div>
                 <!-- APPROVE -->
-                <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#apprModalID">Approve</button>
-                    <!-- Unapprove Modal -->
+                <!-- Approve Modal -->
                     <div class="modal fade" id="apprModalID" tabindex="-1" role="dialog" aria-labelledby="apprModalTitle" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
@@ -76,12 +79,11 @@
                         </div>
                         </div>
                     </div>
-                    <!-- Unapprove Modal End -->
+                <!-- Approve Modal End -->
                 <!-- APPROVE END -->
 
                 <!-- UNAPPROVE -->
-                <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#unappModalID">Unapprove</button>
-                    <!-- Unapprove Modal -->
+                <!-- Unapprove Modal -->
                     <div class="modal fade" id="unappModalID" tabindex="-1" role="dialog" aria-labelledby="unappModalTitle" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
@@ -103,12 +105,11 @@
                         </div>
                         </div>
                     </div>
-                    <!-- Unapprove Modal End -->
+                <!-- Unapprove Modal End -->
                 <!-- UNAPPROVE END -->
 
                 <!-- EDIT -->
-                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editModalID">Edit</button>
-                    <!-- Edit Modal -->
+                <!-- Edit Modal -->
                     <div class="modal fade" id="editModalID" tabindex="-1" role="dialog" aria-labelledby="editModalTitle" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
@@ -126,7 +127,7 @@
                                     </ul>
 
                                     <label for="username">Username</label>
-                                    <input type="text" class="form-control" id="username" name="username">
+                                    <input type="text" class="form-control" id="username" name="username"/>
                                     
                                     <div class="form-group">
                                         <label for="description">Description</label>
@@ -141,12 +142,11 @@
                         </div>
                         </div>
                     </div>
-                    <!-- Edit Modal End -->
+                <!-- Edit Modal End -->
                 <!-- EDIT END -->
 
                 <!-- DELETE -->
-                <button type="button" class="btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#delModalID">Delete</button>
-                    <!-- Delete Modal -->
+                <!-- Delete Modal -->
                     <div class="modal fade" id="delModalID" tabindex="-1" role="dialog" aria-labelledby="delModalTitle" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
@@ -168,13 +168,15 @@
                         </div>
                         </div>
                     </div>
-                    <!-- Delete Modal End -->
+                <!-- Delete Modal End -->
                 <!-- DELETE END -->
             </td>
         </tr>
         </tbody>
     </table>
+    </div>
 
+    <div id="home-show"></div>
 
 </div>
 {% endblock %}

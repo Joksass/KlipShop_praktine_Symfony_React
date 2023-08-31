@@ -27,6 +27,28 @@ api_register:
     controller: App\Controller\ApiRegisterController::index
     methods: POST
 
+api_users_show:
+    path: /api/users/show
+    controller: App\Controller\ApiUsersController::show
+    methods: POST
+api_user_approve:
+    path: /api/user/approve
+    controller: App\Controller\ApiUsersController::approve
+    methods: POST
+api_user_unapprove:
+    path: /api/user/unapprove
+    controller: App\Controller\ApiUsersController::unapprove
+    methods: POST
+api_user_edit:
+    path: /api/user/edit
+    controller: App\Controller\ApiUsersController::edit
+    methods: POST
+api_user_delete:
+    path: /api/user/delete
+    controller: App\Controller\ApiUsersController::delete
+    methods: POST
+
+
 
 
 
