@@ -77,7 +77,7 @@ const RegisterForm = () => {
                         <div class="col-12 d-flex justify-content-center">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="registration-form-agreeTerms" name="agreeTerms" required/>
-                                <label class="form-check-label" for="registration-form-agreeTerms">Checked checkbox</label>
+                                <label class="form-check-label" for="registration-form-agreeTerms">Agree terms</label>
                             </div>
                         </div>
                         <div class="col-12 text-center">
